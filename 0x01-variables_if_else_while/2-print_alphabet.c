@@ -3,22 +3,21 @@
 /**
  * main - Entry point
  *
- * Description: Prints the alphabet in lowercase using putchar
+ * Description: Prints the alphabet in lowercase followed by a new line.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    char letter = 'a'; // Start with 'a', the first character of the alphabet
+	char letter = 'a';
 
-    // Loop through the alphabet until 'z'
-    while (letter <= 'z')
-    {
-        putchar(letter); // Print the current letter
-        letter++;        // Move to the next letter in the alphabet
-    }
+	while (letter <= 'z')
+	{
+		putchar(letter);
+		letter++;
+	}
 
-    putchar('\n'); // Print a new line after printing the alphabet
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
