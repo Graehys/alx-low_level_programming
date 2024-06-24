@@ -1,33 +1,30 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
-
+/* more headers goes there */
 /**
- * main - Entry point
+ * main - entry point function
  *
- * Description: Prints the last digit of a randomly generated number.
- *              Prints whether the last digit is greater than 5, 0, or less than 6 and not 0.
+ * Description: prints only last digit of num
+ * stored in n
  *
- * Return: Always 0 (Success)
+ * Return: always 0 (success)
  */
+/* betty style doc for function main goes there */
 int main(void)
 {
-	int n;
-	int last_digit;
+	int n, q;
 
-	srand(time(0));  /* Seed rand() with current time */
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	q = n % 10;
 
-	n = rand();  /* Generate a random number */
-	last_digit = n % 10;  /* Get the last digit of n */
-
-	printf("Last digit of %d is %d and is ", n, last_digit);
-
-	if (last_digit > 5)
-		printf("greater than 5\n");
-	else if (last_digit == 0)
-		printf("0\n");
-	else
-		printf("less than 6 and not 0\n");
-
+	printf("Last digit of %i is %i ", n, q);
+	if (q > 5)
+		printf("and is greater than 5\n");
+	else if (q < 6 && q != 0)
+		printf("and is less than 6 and not 0\n");
+	else if (q == 0)
+		printf("and is 0\n");
 	return (0);
 }
